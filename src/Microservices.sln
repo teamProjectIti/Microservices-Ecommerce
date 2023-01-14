@@ -7,7 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{10
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{186DE555-5398-407E-B356-3FA66F395F7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Api", "Services\Catalog\Catalog.Api\Catalog.Api.csproj", "{2028B7ED-F749-4718-8781-0770339413B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Api", "Services\Catalog\Catalog.Api\Catalog.Api.csproj", "{2028B7ED-F749-4718-8781-0770339413B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{9FC1B778-6D15-4211-B230-477388509AF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "DataBase\Data\Data.csproj", "{2CCA4EB3-3D53-4825-8FBC-106DB8EBF829}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,10 @@ Global
 		{2028B7ED-F749-4718-8781-0770339413B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2028B7ED-F749-4718-8781-0770339413B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2028B7ED-F749-4718-8781-0770339413B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CCA4EB3-3D53-4825-8FBC-106DB8EBF829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCA4EB3-3D53-4825-8FBC-106DB8EBF829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CCA4EB3-3D53-4825-8FBC-106DB8EBF829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CCA4EB3-3D53-4825-8FBC-106DB8EBF829}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -26,6 +34,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{186DE555-5398-407E-B356-3FA66F395F7A} = {10A01A37-F926-434D-B4A8-22880D4566E8}
 		{2028B7ED-F749-4718-8781-0770339413B7} = {186DE555-5398-407E-B356-3FA66F395F7A}
+		{2CCA4EB3-3D53-4825-8FBC-106DB8EBF829} = {9FC1B778-6D15-4211-B230-477388509AF5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E66C1A30-AFFB-4A43-8534-E887A0C00DFE}
