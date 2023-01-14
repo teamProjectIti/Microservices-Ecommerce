@@ -15,11 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "DataBase\Data\Data.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RepositeryLayer", "RepositeryLayer", "{01A675F5-50E3-486D-931E-94EF01EEC3D4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositery", "RepositeryLayer\Repositery\Repositery.csproj", "{F0DAED97-E329-4BA7-8CCD-71FCE139F4CB}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shard", "Shard", "{A6C2D1E0-89F1-4F6B-8B25-BA36DAE7770E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Shard\Core\Core.csproj", "{D1A655B1-20B5-4422-BAB1-C2D44F390835}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositery", "RepositeryLayer\Repositery\Repositery.csproj", "{F0DAED97-E329-4BA7-8CCD-71FCE139F4CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
