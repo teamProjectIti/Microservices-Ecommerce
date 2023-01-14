@@ -1,4 +1,3 @@
-using Core.Extension;
 using Data.Entities.Connection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
@@ -22,7 +21,7 @@ builder.Services.AddSingleton<IMongoDbSettings>(serviceProvider =>
 
 // dependence injection
 
-builder.Services.AddinjectServices(builder.Configuration);
+//builder.Services.AddinjectServices(builder.Configuration);
 
 var app = builder.Build();
 
