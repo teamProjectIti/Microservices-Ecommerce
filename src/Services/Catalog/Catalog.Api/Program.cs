@@ -19,7 +19,9 @@ builder.Services.AddSingleton<IMongoDbSettings>(serviceProvider =>
     serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
 
 #endregion
+
 // dependence injection
+
 builder.Services.AddinjectServices(builder.Configuration);
 
 var app = builder.Build();
