@@ -11,11 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Api", "Services\Cat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{9FC1B778-6D15-4211-B230-477388509AF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "DataBase\Data\Data.csproj", "{2CCA4EB3-3D53-4825-8FBC-106DB8EBF829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "DataBase\Data\Data.csproj", "{2CCA4EB3-3D53-4825-8FBC-106DB8EBF829}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RepositeryLayer", "RepositeryLayer", "{01A675F5-50E3-486D-931E-94EF01EEC3D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositery", "RepositeryLayer\Repositery\Repositery.csproj", "{F0DAED97-E329-4BA7-8CCD-71FCE139F4CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositery", "RepositeryLayer\Repositery\Repositery.csproj", "{F0DAED97-E329-4BA7-8CCD-71FCE139F4CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
