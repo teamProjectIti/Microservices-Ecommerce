@@ -15,4 +15,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DataBase\Data\Data.csproj" />
+    <ProjectReference Include="..\..\..\Shard\Core\Core.csproj" />
+  </ItemGroup>
+
 </Project>
