@@ -1,5 +1,5 @@
+using Core.extension.Catalog;
 using Data.Entities.Connection;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,7 +21,10 @@ builder.Services.AddSingleton<IMongoDbSettings>(serviceProvider =>
 
 // dependence injection
 
-//builder.Services.AddinjectServices(builder.Configuration);
+builder.Services.AddinjectDbServices(builder.Configuration);
+
+// Auto Mapper
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 

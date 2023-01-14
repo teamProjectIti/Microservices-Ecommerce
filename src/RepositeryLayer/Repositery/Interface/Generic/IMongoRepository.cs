@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Repositery.Interface.Generic
 {
-    internal interface IMongoRepository
+    public interface IMongoRepository
     {
         public interface IMongoRepository<TDocument> where TDocument : IDocument
         {
