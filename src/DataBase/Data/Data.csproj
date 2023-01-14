@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entity\" />
+    <Folder Include="Shard\" />
+  </ItemGroup>
+
+  <ItemGroup>
+     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+     <PackageReference Include="MongoDB.Bson" Version="2.18.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.18.0" />
   </ItemGroup>
 
 </Project>
