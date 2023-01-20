@@ -1,9 +1,9 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Dto.Catalog.Product;
 public class ProductDto
 {
-    public ObjectId Id { get; set; }
     public string Name { get; set; }
     public string Category { get; set; }
     public string Summary { get; set; }

@@ -3,7 +3,7 @@ using Data.Entities.Catalog.Products;
 using Dto.Catalog.Product;
 using Microsoft.AspNetCore.Mvc;
 using Repositery.Implemint.Generic;
-using static Repositery.Interface.Generic.IMongoRepository;
+using Repositery.Interface.Generic;
 
 namespace Catalog.Api.Controllers
 {
@@ -11,36 +11,43 @@ namespace Catalog.Api.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly IMongoRepository<Product> _ProductRepository;
+        private readonly IMongoRepository<Products> _ProductRepository;
         private readonly IMapper mapper;
 
-        public ProductController(MongoRepository<Product> ProductRepository, IMapper mapper)
+        public ProductController(IMongoRepository<Products> ProductRepository, IMapper mapper)
         {
             _ProductRepository = ProductRepository;
             this.mapper = mapper;
         }
 
-        [HttpPost("registerPerson")]
-        public async Task<IActionResult> AddPerson(ProductDto model)
+        [HttpPost("AddProduct")]
+        public async Task<ActionResult> AddProduct(ProductDto model)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            var result = mapper.Map<Product>(model);
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
+            var result = mapper.Map<Products>(model);
 
             await _ProductRepository.InsertOneAsync(result);
             return Ok(result);
         }
 
-        //[HttpGet("getPeopleData")]
+        //[HttpGet("getProductData")]
         //public IEnumerable<string> GetPeopleData()
         //{
         //    var people = _ProductRepository.FilterBy(
-        //        filter => filter.FirstName != "test",
+        //        filter => filter.Name != "test",
         //        projection => projection.FirstName
         //    );
         //    return people;
         //}
+
+        [HttpGet("GetAllProductData")]
+        public async Task<ActionResult> GetAllProductData()
+        {
+            var product = _ProductRepository.AsQueryable();
+            return Ok(product);
+        }
     }
 }

@@ -1,11 +1,10 @@
-﻿using Data.Entities.BaseData;
-using Data.Entities.BaseData.Mango;
+﻿using Data.Entities.BaseData.Mango;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace Data.Entities.Catalog.Products
 {
-    [BsonCollection("Product")]
-    public class Product: Document
+    [BsonCollection("Products")]
+    public class Products: Document
     {
         [BsonElement("Name")]
         public string Name { get; set; }

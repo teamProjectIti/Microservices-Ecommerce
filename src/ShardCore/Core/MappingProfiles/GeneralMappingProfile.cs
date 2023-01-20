@@ -10,7 +10,7 @@ namespace Core.MappingProfiles
         {
             #region Product
 
-            CreateMap<Product, ProductDto>().ReverseMap();
+            CreateMap<Products, ProductDto>().ReverseMap();
              #endregion
         }
     }

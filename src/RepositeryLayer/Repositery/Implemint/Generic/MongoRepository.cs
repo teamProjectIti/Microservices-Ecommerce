@@ -2,13 +2,13 @@
 using Data.Entities.Connection;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using Repositery.Interface.Generic;
 using System.Linq.Expressions;
-using static Repositery.Interface.Generic.IMongoRepository;
 
 namespace Repositery.Implemint.Generic
 {
     public class MongoRepository<TDocument> : IMongoRepository<TDocument>
-    where TDocument : IDocument
+      where TDocument : IDocument
     {
         private readonly IMongoCollection<TDocument> _collection;
 

@@ -1,6 +1,10 @@
 using Core.extension.Catalog;
 using Data.Entities.Connection;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using MongoDB.Driver;
+using Repositery.Implemint.Generic;
+using Repositery.Interface.Generic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,11 +16,23 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 #region connection with mango Db
-builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
+
+
+builder.Services.Configure<MongoDbSettings>(
+    builder.Configuration.GetSection("MongoDbSettings")
+);
+builder.Services.AddSingleton<IMongoDatabase>(options => {
+    var settings = builder.Configuration.GetSection("MongoDBSettings").Get<MongoDbSettings>();
+
+    var client = new MongoClient(settings.ConnectionString);
+    return client.GetDatabase(settings.DatabaseName);
+});
 
 builder.Services.AddSingleton<IMongoDbSettings>(serviceProvider =>
     serviceProvider.GetRequiredService<IOptions<MongoDbSettings>>().Value);
 
+
+builder.Services.AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
 #endregion
 
 // dependence injection
