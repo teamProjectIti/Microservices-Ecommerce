@@ -19,10 +19,10 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.Configure<MongoDbSettings>(
-    builder.Configuration.GetSection("MongoDbSettings")
+    builder.Configuration.GetSection("DatabaseSettings")
 );
 builder.Services.AddSingleton<IMongoDatabase>(options => {
-    var settings = builder.Configuration.GetSection("MongoDBSettings").Get<MongoDbSettings>();
+    var settings = builder.Configuration.GetSection("DatabaseSettings").Get<MongoDbSettings>();
 
     var client = new MongoClient(settings.ConnectionString);
     return client.GetDatabase(settings.DatabaseName);
