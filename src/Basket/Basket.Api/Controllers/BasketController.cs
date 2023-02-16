@@ -36,7 +36,7 @@ namespace Basket.Api.Controllers
             return Ok();
         }
 
-        [HttpPut("UpdateBasket")]
+        [HttpPost("UpdateBasket")]
         public async Task<ActionResult<ShoppingCart>> UpdateBasket(ShoppingCart model)
         {
             return Ok(await _basket.SetBasket(model));
