@@ -1,9 +1,10 @@
-﻿namespace Data.Entities.Discount
+﻿using Data.Entities.BaseData;
+
+namespace Data.Entities.Discount
 {
-    public class Coupon
+    public class Coupon: BaseEntityPostGres
     {
-        public int Id { get; set; }
-        public string ProductName { get; set; }
+         public string ProductName { get; set; }
         public string Description { get; set; }
         public int Amount { get; set; }
     }
