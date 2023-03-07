@@ -1,6 +1,4 @@
 ﻿using Data.Entities.Discount;
-using Dto.Common;
-using Dto.Discount;
 using Microsoft.AspNetCore.Mvc;
 using Repositery.Interface.Discount.CouponInterf;
 
@@ -48,7 +46,7 @@ namespace Discount.Api.Controllers
         }
         
         [HttpGet("GetAllDiscount")]
-        public async Task<AjexResult> GetAllDiscount()
+        public async Task<Coupon> GetAllDiscount()
         {
             var coupon = await _discountRepository.GetAllAsync();
             return coupon;

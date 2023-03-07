@@ -1,15 +1,15 @@
-﻿using Dto.Common;
+﻿using Data.Entities.Discount;
 
 namespace Repositery.Interface.Discount.CouponInterf
 {
     public interface IDiscountRepository<T> where T:class,new()
     {
-        Task<AjexResult> GetByIdAsync(int id);
-        Task<AjexResult> GetByNameAsync(string text);
-        Task<AjexResult> GetAllAsync();
-        Task<AjexResult> AddAsync(T entity);
-        Task<AjexResult> UpdateAsync(T entity);
-        Task<AjexResult> DeleteAsync(T entity);
+        Task<Coupon> GetByIdAsync(int id);
+        Task<Coupon> GetByNameAsync(string text);
+        Task<Coupon> GetAllAsync();
+        Task<Coupon> AddAsync(T entity);
+        Task<Coupon> UpdateAsync(T entity);
+        Task<Coupon> DeleteAsync(T entity);
         Task<bool> DeleteAsync(int Id);
     }
 }
